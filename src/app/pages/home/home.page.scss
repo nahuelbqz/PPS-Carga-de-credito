@@ -1,0 +1,144 @@
+ion-content {
+  --background: rgb(0, 0, 0);
+  --background: linear-gradient(
+    0deg,
+    rgb(25, 25, 25) 0%,
+    rgb(131, 38, 38) 100%
+  );
+}
+
+.container {
+  margin-top: 30px;
+}
+
+// swetalert
+::ng-deep .swal2-confirm {
+  background-color: #28a745 !important;
+  color: #fff !important;
+  font-weight: bold;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.6rem 1.2rem;
+}
+
+::ng-deep .swal2-cancel {
+  background-color: #dc3545 !important;
+  color: #fff !important;
+  font-weight: bold;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.6rem 1.2rem;
+}
+::ng-deep .swal2-custom {
+  background-color: #444 !important; // gris oscuro
+  color: #fff !important; // texto blanco
+  border-radius: 12px;
+  font-family: sans-serif;
+}
+
+::ng-deep .swal2-title {
+  color: #fff !important;
+}
+
+::ng-deep .swal2-html-container {
+  color: #ddd !important;
+}
+
+//
+.scanner-activo {
+  --background: transparent;
+  --ion-background-color: transparent;
+}
+
+.wrapper {
+  background: rgb(73, 1, 1);
+  border-radius: 15px;
+  border: 3px solid #fff;
+}
+
+.visor {
+  margin-top: 16vh;
+  display: grid;
+  place-content: center;
+}
+
+.centrado {
+  margin-top: 50px;
+  display: grid;
+  place-content: center;
+}
+
+.escanear {
+  display: grid;
+  place-content: center;
+  width: 15rem;
+  height: 4rem;
+  border-radius: 30px;
+  box-shadow: 3px 3px 4px #000;
+  color: black;
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-family: fantasy;
+  background: #ff3300;
+}
+.escanear:active {
+  transform: scale(1.1);
+  background: #000;
+  box-shadow: 0 0 12px rgb(255, 255, 255);
+  transition: transform 0.5s, background 0.5s;
+}
+
+.titulo {
+  display: grid;
+  place-content: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-family: fantasy;
+  font-weight: bold;
+  margin-top: 0px;
+  color: #fff;
+  text-shadow: 3px 3px 3px #000;
+}
+
+.monto {
+  background: rgb(91, 88, 88);
+  background: linear-gradient(
+    0deg,
+    rgba(91, 88, 88, 1) 0%,
+    rgba(94, 245, 4, 1) 100%
+  );
+  width: 21rem;
+  height: 23rem;
+  font-size: 9rem;
+  display: grid;
+  place-content: center;
+  font-family: fantasy;
+  color: #fff;
+  text-shadow: 3px 3px 3px #000;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  box-shadow: 8px 8px 8px 4px #000;
+}
+.monto-amarillo {
+  background: rgb(55, 55, 55);
+}
+
+.scanner-activo-visor {
+  color: transparent;
+  text-shadow: 3px 3px 3px transparent;
+  background: transparent;
+  background-color: transparent;
+  position: relative;
+  box-shadow: 0 0 0px transparent;
+}
+
+@keyframes move-bar {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}

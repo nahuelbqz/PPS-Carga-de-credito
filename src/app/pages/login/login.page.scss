@@ -1,0 +1,94 @@
+ion-content {
+  --background: rgb(0, 0, 0);
+  --background: linear-gradient(
+    0deg,
+    rgb(25, 25, 25) 0%,
+    rgb(131, 38, 38) 100%
+  );
+
+  font-family: fantasy;
+}
+
+.container {
+  margin-top: 2rem;
+}
+
+.titulo {
+  margin-top: 30px;
+  width: 100%;
+  background-color: #d7d7d7;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+.titulo-texto {
+  font-weight: bold;
+  color: black;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.noFoto {
+  margin-top: 1rem;
+}
+
+.logo {
+  width: 11rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.botones {
+  --background: rgb(177, 22, 22);
+  color: #fff;
+  width: 80%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  border: 3px groove #fff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px #000;
+}
+
+.items {
+  margin-bottom: 10%;
+  --background: #f2f4f8;
+  width: 80%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3rem;
+  box-shadow: 10px 10px 10px #000;
+}
+
+.ionButton {
+  margin-top: 3rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #d7d7d7;
+  border: 3px groove rgb(240, 13, 13);
+  color: black;
+  font-weight: bold;
+  font-size: 17px;
+  border-radius: 50px;
+  box-shadow: 2px 2px rgb(0, 0, 0);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  box-shadow: 10px 10px 10px #000;
+}
+
+.ionButton:hover {
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.containerButtons {
+  margin-bottom: 2rem;
+}

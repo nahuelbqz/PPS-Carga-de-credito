@@ -1,0 +1,59 @@
+<ion-content [ngClass]="scanActive?'scanner-activo':''" noscroll>
+  <div class="container">
+
+    <!-- Logout y borrar saldo -->
+    <ion-fab vertical="top" horizontal="end" slot="fixed" style="margin-top: 30px;" *ngIf="!scanActive">
+      <ion-fab-button color="dark">
+        <ion-icon name="menu-sharp"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="start">
+        <ion-fab-button (click)="cerrarSesion()" style="border: 1px solid #000; border-radius: 50%"><ion-icon
+            name="exit-sharp" style="
+            color: #f00;
+            background: rgb(255, 255, 255);
+            padding: 5px;
+            font-size: 3rem;
+          "></ion-icon></ion-fab-button>
+        <ion-fab-button (click)="confirmarEliminarSaldo()" style="border: 1px solid #000; border-radius: 50%">
+          <ion-icon name="trash-sharp" style="
+            color: #f00;
+            background: rgb(255, 255, 255);
+            padding: 5px;
+            font-size: 3rem;
+          "></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+
+    <!-- Ver saldo y escaner -->
+    <div class="visor">
+      <h1 class="titulo" *ngIf="!scanActive">SALDO ACTUAL</h1>
+      <h1 class="titulo" *ngIf="scanActive">ESCANEANDO QR..</h1>
+      <p class="monto" [ngClass]="{
+        'scanner-activo-visor': scanActive, 
+        'monto-amarillo': credit >= 0  && !scanActive}">
+        ${{this.credit}} <span></span>
+      </p>
+      <!-- <p>{{this.currentScan}}</p> -->
+    </div>
+    <div class="centrado">
+      <button class="escanear" expand="block" type="button" (click)="startScan()" *ngIf="!scanActive">
+        <ion-text style="
+          color: #fff;
+          text-shadow: 2px 2px 4px #000;
+          font-size: 1.7rem;
+          font-family: fantasy;
+        ">ESCANEAR QR</ion-text>
+      </button>
+      <button class="escanear" expand="block" type="button" (click)="stopScan()" *ngIf="scanActive">
+        <ion-text style="
+          color: #fff;
+          text-shadow: 2px 2px 4px #000;
+          font-size: 1.7rem;
+          font-family: fantasy;
+        ">DETENER <ion-icon name="scan-outline"></ion-icon></ion-text>
+      </button>
+    </div>
+
+  </div>
+</ion-content>
